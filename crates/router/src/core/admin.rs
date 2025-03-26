@@ -4085,7 +4085,7 @@ pub async fn retrieve_profile(
                 .collect::<Vec<Option<api_models::admin::WebhookDetails>>>(),
         );
     }
-    
+
     Ok(service_api::ApplicationResponse::Json(profile_response))
 }
 

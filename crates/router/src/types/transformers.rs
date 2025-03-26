@@ -2127,9 +2127,7 @@ impl ForeignFrom<Vec<Option<diesel_models::business_profile::WebhookDetails>>>
 {
     fn foreign_from(item: Vec<Option<diesel_models::business_profile::WebhookDetails>>) -> Self {
         item.into_iter()
-            .map(|webhook_detail| {
-                webhook_detail.map(ForeignFrom::foreign_from)
-            })
+            .map(|webhook_detail| webhook_detail.map(ForeignFrom::foreign_from))
             .collect()
     }
 }
